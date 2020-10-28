@@ -11,7 +11,7 @@ public class Algorithms1 {
 
     // TODO 1 - Gennemse Data klassen, og skriv gode kommentarer til det
 
-    // TODO 2 - Skriv en randomBoyName() metode i Algorithms1, som returnerer et tilfældigt drengenavn fra Data klassens randomPigeNavne property OBS: randomPigeNavne skal forblive private!
+    // TODO 2 - Skriv en randomBoyName() metode i Algorithms1, som returnerer et tilfældigt drengenavn fra Data klassens randomDrengeNavne property OBS: randomDrengeNavne skal forblive private!
 
     // TODO 3 - Skriv en test til randomBoyName() metoden HINT: Se metoden exampleOfPredictableRandomNumber() for at se, hvordan du kan lave et tilfældigt nummer som er altid det samme (til test)
 
@@ -28,6 +28,9 @@ public class Algorithms1 {
     public static void main(String[] args) {
         exampleOfPredictableRandomNumber();
     }
+    {
+        randomBoyName();
+    }
 
     private static void exampleOfPredictableRandomNumber() {
         Random random = new Random();
@@ -36,4 +39,9 @@ public class Algorithms1 {
         System.out.println(random.nextInt(45));
     }
 
+    public static String randomBoyName() {
+        Random rand = new Random();
+        String[] names = new Data().randomDrengeNavne();
+        return names[rand.nextInt(names.length)];
+    }
 }
