@@ -39,9 +39,23 @@ public class Algorithms1 {
         System.out.println(random.nextInt(45));
     }
 
-    public static String randomBoyName() {
+    public String randomBoyName() {
+
         Random rand = new Random();
-        String[] names = new Data().randomDrengeNavne();
+        String[] names = new Data().getRandomDrengeNavne();
+
         return names[rand.nextInt(names.length)];
+        /*
+        String[] names;
+        Data data = new Data();
+        names = data.getRandomDrengeNavne;
+        int arrayLength = names.length;
+        int randomInt = rand.nextInt(arrayLength);
+        String randomName = names[randomInt];
+        System.out.println(randomName);
+        return randomName;
+
+         */
+
     }
 }
