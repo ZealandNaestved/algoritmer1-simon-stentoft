@@ -5,6 +5,6 @@ class Algorithms1Test {
     @org.junit.jupiter.api.Test
     void randomBoyName() {
         Algorithms1 a = new Algorithms1();
-
+        assertEquals("Awesome", a.randomBoyName());
     }
 }
