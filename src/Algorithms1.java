@@ -58,4 +58,29 @@ public class Algorithms1 {
          */
 
     }
+    public String randomGirlName() {
+        Random rand = new Random();
+        String[] names = new Data().getRandomPigeNavne();
+
+        return names[rand.nextInt(names.length)];
+    }
+    public String[] randomName() {
+        Random rand = new Random();
+        String[] allNames;
+        String[] names;
+        String[] boyNames = new Data().getRandomDrengeNavne();
+        String[] girlNames = new Data().getRandomPigeNavne();
+        int hvorStortSkalDetVære = boyNames.length + girlNames.length;
+        allNames = new String[hvorStortSkalDetVære];
+        //put alle piger ned i allNames
+        int i = 0;
+        for (String name: boyNames) {
+            allNames[i++] = name;
+        }
+        //put alle drenge ned i allNames
+        for (String name: girlNames) {
+            allNames[i++] = name;
+        }
+        return allNames[rand.nextInt(allNames.length)];
+    }
 }
