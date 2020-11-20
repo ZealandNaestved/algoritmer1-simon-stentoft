@@ -12,6 +12,7 @@ public class Algorithms2 {
         SearchDrengeNavne();
         SortIntArray();
         SortStringArray();
+        BinarySearchArray();
     }
 
     // TODO 1 Skriv en metode her i denne klasse, som kan finde et tal i Data klassens randomNumbers1000 felt med LINEAR SEARCH
@@ -49,8 +50,16 @@ public class Algorithms2 {
         Arrays.sort(drengeNavne);
         return drengeNavne;
     }
-    // TODO 5 Skriv en metode her i denne klasse, som kan finde et navn i Data klassens randomNumbers1000 felt med BINARY SEARCH
+    // TODO 5 Skriv en metode her i denne klasse, som kan finde et tal i Data klassens randomNumbers1000 felt med BINARY SEARCH
+    // For at kunne binarySearch skal array være pre sorted i increasing order.
 
+    public static void BinarySearchArray() {
+        int result = Arrays.binarySearch(SortIntArray(),404);  //Bruger mit sorterede array fra Opg4 pga. array skal være sorteret i forvejen i increasing order før man kan binary search.
+        if (result == -1) {
+            System.out.println("Element is not present");
+        } else
+            System.out.println("Element is present at index " + result);
+    }
 
 
     // TODO 6 Skriv en metode her i denne klasse, som kan finde et navn i Data klassens randomDrengeNavne felt med BINARY SEARCH
