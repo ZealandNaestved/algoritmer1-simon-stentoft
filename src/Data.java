@@ -38,4 +38,8 @@ public class Data {
     public String[] getRandomPigeNavne(){
         return randomPigeNavne;
     }
+
+    public int[] getRandomNumbers1000() {
+        return randomNumbers1000;
+    }
 }

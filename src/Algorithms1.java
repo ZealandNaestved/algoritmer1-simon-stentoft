@@ -8,6 +8,7 @@ import java.util.Random;
  */
 
 public class Algorithms1 {
+    public Random rand;
 
     // TODO 1 - Gennemse Data klassen, og skriv gode kommentarer til det
 
@@ -64,7 +65,7 @@ public class Algorithms1 {
 
         return names[rand.nextInt(names.length)];
     }
-    public String[] randomName() {
+    public String randomName() {
         Random rand = new Random();
         String[] allNames;
         String[] names;
