@@ -61,7 +61,6 @@ public class Algorithms2 {
             System.out.println("Element is present at index " + result);
     }
 
-
     // TODO 6 Skriv en metode her i denne klasse, som kan finde et navn i Data klassens randomDrengeNavne felt med BINARY SEARCH
 
 
