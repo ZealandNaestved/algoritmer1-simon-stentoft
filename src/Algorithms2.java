@@ -10,7 +10,8 @@ public class Algorithms2 {
     public static void main(String[] args) {
         SearchNumbers1000();
         SearchDrengeNavne();
-        SortArray();
+        SortIntArray();
+        SortStringArray();
     }
 
     // TODO 1 Skriv en metode her i denne klasse, som kan finde et tal i Data klassens randomNumbers1000 felt med LINEAR SEARCH
@@ -35,7 +36,7 @@ public class Algorithms2 {
 
     // TODO 3 Skriv en metode her i denne klasse, som kan returnere et sorteret array fra randomNumbers1000
 
-    public static int[] SortArray() {
+    public static int[] SortIntArray() {
         int[] numbers = new Data().getRandomNumbers1000(); //Laver et array kaldet numbers, der får data fra randomNumbers1000 array i Data.
         Arrays.sort(numbers); //Bruger Arrays.sort metode til at sortere numrene.
         return numbers;
@@ -43,7 +44,14 @@ public class Algorithms2 {
 
     // TODO 4 Skriv en metode her i denne klasse, som kan returnere et sorteret array fra randomDrengeNavne
 
+    public static String[] SortStringArray() {
+        String[] drengeNavne = new Data().getRandomDrengeNavne();
+        Arrays.sort(drengeNavne);
+        return drengeNavne;
+    }
     // TODO 5 Skriv en metode her i denne klasse, som kan finde et navn i Data klassens randomNumbers1000 felt med BINARY SEARCH
+
+
 
     // TODO 6 Skriv en metode her i denne klasse, som kan finde et navn i Data klassens randomDrengeNavne felt med BINARY SEARCH
 
