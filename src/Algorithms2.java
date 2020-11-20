@@ -9,6 +9,7 @@ import java.util.Arrays;
 public class Algorithms2 {
     public static void main(String[] args) {
         SearchNumbers1000();
+        SearchDrengeNavne();
     }
 
     // TODO 1 Skriv en metode her i denne klasse, som kan finde et tal i Data klassens randomNumbers1000 felt med LINEAR SEARCH
@@ -23,7 +24,19 @@ public class Algorithms2 {
 
     // TODO 2 Skriv en metode her i denne klasse, som kan finde et navn i Data klassens randomDrengeNavne felt med LINEAR SEARCH
 
+    public static void SearchDrengeNavne() {
+        int result = linearSearch(new Data().getRandomDrengeNavne(),"yayaya");
+        if (result == -1) {
+            System.out.println("Name is not present");
+        } else
+            System.out.println("Element is present at index " + result);
+    }
+
     // TODO 3 Skriv en metode her i denne klasse, som kan returnere et sorteret array fra randomNumbers1000
+
+    public static int SortArray() {
+
+    }
 
     // TODO 3 Skriv en metode her i denne klasse, som kan returnere et sorteret array fra randomDrengeNavne
 
@@ -33,7 +46,7 @@ public class Algorithms2 {
 
 
     //Search methods
-    public static int searchLinear(int arr[], int x) {
+    public static int searchLinear(int arr[], int x) { //Ints 
 
         int n = arr.length;
         for (int i = 0; i < n; i++) {
@@ -41,5 +54,14 @@ public class Algorithms2 {
                 return i;
         }
         return -1; //Hvis x ikke er i array
+    }
+    public static int linearSearch(String arr[], String x) { //String
+        int n = arr.length;
+        for (int i = 0; i < n; i++)
+        {
+            if (arr[i].equals(x))
+                return i;
+        }
+        return -1;
     }
 }
