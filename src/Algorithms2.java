@@ -10,9 +10,10 @@ public class Algorithms2 {
     public static void main(String[] args) {
         SearchNumbers1000();
         SearchDrengeNavne();
-        SortIntArray();
-        SortStringArray();
+        SortDrengeArray();
+        SortRandomNumbersArray();
         BinarySearchArray();
+        BinarySearchDrengeNavneArray();
     }
 
     // TODO 1 Skriv en metode her i denne klasse, som kan finde et tal i Data klassens randomNumbers1000 felt med LINEAR SEARCH
@@ -37,7 +38,7 @@ public class Algorithms2 {
 
     // TODO 3 Skriv en metode her i denne klasse, som kan returnere et sorteret array fra randomNumbers1000
 
-    public static int[] SortIntArray() {
+    public static int[] SortRandomNumbersArray() {
         int[] numbers = new Data().getRandomNumbers1000(); //Laver et array kaldet numbers, der får data fra randomNumbers1000 array i Data.
         Arrays.sort(numbers); //Bruger Arrays.sort metode til at sortere numrene.
         return numbers;
@@ -45,7 +46,7 @@ public class Algorithms2 {
 
     // TODO 4 Skriv en metode her i denne klasse, som kan returnere et sorteret array fra randomDrengeNavne
 
-    public static String[] SortStringArray() {
+    public static String[] SortDrengeArray() {
         String[] drengeNavne = new Data().getRandomDrengeNavne();
         Arrays.sort(drengeNavne);
         return drengeNavne;
@@ -54,7 +55,7 @@ public class Algorithms2 {
     // For at kunne binarySearch skal array være pre sorted i increasing order.
 
     public static void BinarySearchArray() {
-        int result = Arrays.binarySearch(SortIntArray(),404);  //Bruger mit sorterede array fra Opg4 pga. array skal være sorteret i forvejen i increasing order før man kan binary search.
+        int result = Arrays.binarySearch(SortRandomNumbersArray(),404);  //Bruger mit sorterede array fra Opg4 pga. array skal være sorteret i forvejen i increasing order før man kan binary search.
         if (result == -1) {
             System.out.println("Element is not present");
         } else
@@ -63,6 +64,13 @@ public class Algorithms2 {
 
     // TODO 6 Skriv en metode her i denne klasse, som kan finde et navn i Data klassens randomDrengeNavne felt med BINARY SEARCH
 
+    public static void BinarySearchDrengeNavneArray() {
+        int result = Arrays.binarySearch(SortDrengeArray(),"Brormand");
+        if (result == -1) {
+            System.out.println("Element is not present");
+        } else
+            System.out.println("Element is present at index " + result);
+    }
 
     //Search methods
     public static int searchLinear(int arr[], int x) { //Ints
